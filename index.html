@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه بامیلو</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header1">
+          <div class="header1-right">
+            <img src="img/bamilo.png" alt="لوگوی بامیلو" />
+            <div class="searchBox">
+              <input
+                type="search"
+                id="search-input"
+                placeholder="جستجوی محصولات"
+              />
+              <button aria-label="جستجو">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="header1-left">
+            <div class="login">
+              <a href="#">
+                <i class="fa fa-user-o"></i>
+                <span>ورود / ثبت نام</span>
+              </a>
+              <div class="cart-icon-box" id="cart-icon">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header2">
+          <ul>
+            <li>
+              <a href="#">مد و لباس <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">کالای دیجیتال <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">لوازم خانه <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">زیبایی و سلامت <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">سرگرمی و ورزش <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">فرهنگ و هنر <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">ابزار و خودرو <i class="fa fa-chevron-down"></i></a>
+            </li>
+            <li>
+              <a href="#">پت شاپ <i class="fa fa-chevron-down"></i></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main>
+        <!-- اسلایدر -->
+        <section class="sec1">
+          <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+              <img src="img/slide1.jpg" alt="اسلاید 1" class="slide active" />
+              <img src="img/slide2.jpg" alt="اسلاید 2" class="slide" />
+              <img src="img/slide3.jpg" alt="اسلاید 3" class="slide" />
+              <img src="img/slide4.jpg" alt="اسلاید 4" class="slide" />
+            </div>
+            <button class="prev-btn" onclick="changeSlide(-1)">&#10095;</button>
+            <button class="next-btn" onclick="changeSlide(1)">&#10094;</button>
+            <div class="dots-container" id="dotsContainer">
+              <span class="dot active" onclick="currentSlide(0)"></span>
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- خدمات -->
+        <section class="sec2">
+          <div class="sec2-boxs">
+            <img src="img/sec2-box1.png" alt="ارسال به سراسر ایران" />
+            <div class="sec2-text">
+              <p>ارسال به سراسر ایران</p>
+              <p>ارسال به تمام ایران با بسته بندی ویژه</p>
+            </div>
+          </div>
+          <div class="sec2-boxs">
+            <img src="img/sec2-box2.png" alt="۳۰ روز بازگشت رایگان کالا" />
+            <div class="sec2-text">
+              <p>۳۰ روز بازگشت رایگان کالا</p>
+              <p>بر اساس قوانین</p>
+            </div>
+          </div>
+          <div class="sec2-boxs">
+            <img src="img/sec2-box3.png" alt="پشتیبانی 24 ساعته" />
+            <div class="sec2-text">
+              <p>پشتیبانی 24 ساعته</p>
+              <p>7 روز هفته</p>
+            </div>
+          </div>
+          <div class="sec2-boxs">
+            <img src="img/sec2-box4.png" alt="مجموعه متنوع محصولات" />
+            <div class="sec2-text">
+              <p>مجموعه ای از متنوع ترین</p>
+              <p>محصولات در فروشگاه‌های اینترنتی</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- دسته‌بندی‌های ویژه -->
+        <section class="sec3">
+          <div class="sec3-boxs sec3-box1">
+            <div class="sec3-boxs-img">
+              <img src="img/sec3-box1.png" alt="ساعت هوشمند" />
+            </div>
+            <div class="sec3-text">
+              <h4>ساعت هوشمند</h4>
+              <p>تخفیف تا %60</p>
+              <button>خرید کنید</button>
+            </div>
+          </div>
+          <div class="sec3-boxs sec3-box2">
+            <div class="sec3-boxs-img">
+              <img src="img/sec3-box2.png" alt="ساعت های عقربه ای" />
+            </div>
+            <div class="sec3-text">
+              <h4>ساعت های عقربه ای</h4>
+              <p>تخفیف تا %30</p>
+              <button>خرید کنید</button>
+            </div>
+          </div>
+          <div class="sec3-boxs sec3-box3">
+            <div class="sec3-boxs-img">
+              <img src="img/sec3-box3.jpg" alt="دوال سنس جدید" />
+            </div>
+            <div class="sec3-text">
+              <h4>دوال سنس جدید</h4>
+              <p>برای پلی استیشن 5</p>
+              <button>خرید کنید</button>
+            </div>
+          </div>
+          <div class="sec3-boxs sec3-box4">
+            <div class="sec3-boxs-img">
+              <img src="img/sec3-box4.jpg" alt="دوربین دیجیتال" />
+            </div>
+            <div class="sec3-text">
+              <h4>دوربین دیجیتال</h4>
+              <p>ثبت لحظه های زندگی</p>
+              <button>خرید کنید</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- کالای دیجیتال -->
+        <section class="sec4">
+          <div class="sec4-boxs">
+            <img src="img/sec4-box1.jpg" alt="گوشی موبایل" />
+            <h5>گوشی موبایل</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box2.jpg" alt="لپ تاپ" />
+            <h5>لپ تاپ</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box3.jpg" alt="کامپیوتر و تجهیزات" />
+            <h5>کامپیوتر و تجهیزات</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box4.jpg" alt="ساعت هوشمند" />
+            <h5>ساعت هوشمند</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box5.jpg" alt="هندزفری، هدفون" />
+            <h5>هندزفری، هدفون</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box6.jpg" alt="پرینتر" />
+            <h5>پرینتر</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box7.jpg" alt="شبکه و ارتباطات" />
+            <h5>شبکه و ارتباطات</h5>
+          </div>
+          <div class="sec4-boxs">
+            <img src="img/sec4-box8.jpg" alt="دوربین عکاسی" />
+            <h5>دوربین عکاسی</h5>
+          </div>
+        </section>
+
+        <!-- محصولات شگفت‌انگیز -->
+        <section class="sec5">
+          <div class="sec5top">
+            <div class="sec5top1"></div>
+            <div class="sec5top2">
+              <img src="img/sec5top.png" alt="پیشنهاد شگفت‌انگیز" />
+              <div class="timer-container" id="countdown-timer">
+                <span class="timer-label">پایان تخفیف در:</span>
+                <div class="timer-wrapper">
+                  <div class="timer-box" id="hours">00</div>
+                  <span>:</span>
+                  <div class="timer-box" id="minutes">00</div>
+                  <span>:</span>
+                  <div class="timer-box" id="seconds">00</div>
+                </div>
+              </div>
+            </div>
+            <div class="sec5top3">
+              <a href="#"
+                ><button>نمایش همه<i class="fa fa-angle-left"></i></button
+              ></a>
+            </div>
+          </div>
+          <div class="sec5bottom" id="amazing-products-container"></div>
+        </section>
+
+        <!-- بنرهای تبلیغاتی -->
+        <section class="sec6">
+          <div class="sec6-box">
+            <img src="img/sec6-box1.png" alt="بنر تبلیغاتی 1" />
+          </div>
+          <div class="sec6-box">
+            <img src="img/sec6-box2.png" alt="بنر تبلیغاتی 2" />
+          </div>
+          <div class="sec6-box">
+            <img src="img/sec6-box3.png" alt="بنر تبلیغاتی 3" />
+          </div>
+        </section>
+
+        <!-- لپ تاپ -->
+        <section class="sec7">
+          <div class="sec7-top">
+            <h3>لپ تاپ</h3>
+            <a href="#"
+              ><button>نمایش همه <i class="fa fa-angle-left"></i></button
+            ></a>
+          </div>
+          <div class="sec7-bottom" id="laptop-products-container"></div>
+        </section>
+
+        <!-- بنرهای دوتایی -->
+        <section class="sec8">
+          <div class="sec8-pic">
+            <img src="img/sec8-pic1.png" alt="بنر 1" />
+          </div>
+          <div class="sec8-pic">
+            <img src="img/sec8-pic2.png" alt="بنر 2" />
+          </div>
+        </section>
+
+        <!-- لوازم خانگی -->
+        <section class="sec9">
+          <div class="sec9-top">
+            <h3>لوازم خانگی</h3>
+            <a href="#"
+              ><button>نمایش همه <i class="fa fa-angle-left"></i></button
+            ></a>
+          </div>
+          <div class="sec9-bottom" id="sec9-products"></div>
+        </section>
+
+        <!-- بنر پایانی -->
+        <section class="sec10">
+          <a href="#"><img src="img/sec10-pic.jpg" alt="بنر اصلی" /></a>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-box">
+          <div class="ftop-pic">
+            <img src="img/bamilo.png" alt="لوگوی بامیلو" />
+          </div>
+          <div class="fbottom">
+            <div class="fbottom1">
+              <div class="fbottom1-boxs">
+                <div class="fbottom1-name"><p>خدمات مشتریان</p></div>
+                <p><a href="#">سوالات متداول</a></p>
+                <p><a href="#">رهگیری سفارش‌ها</a></p>
+                <p><a href="#">نحوه ثبت سفارش</a></p>
+                <p><a href="#">روش های پرداخت</a></p>
+                <p><a href="#">شرایط حمل و تحویل کالا</a></p>
+                <p><a href="#">شرایط ضمانت و بازگشت کالا</a></p>
+                <p><a href="#">شرایط استفاده از کوپن تخفیف</a></p>
+                <p><a href="#">سیاست حفظ حریم خصوصی</a></p>
+              </div>
+              <div class="fbottom1-boxs">
+                <div class="fbottom1-name"><p>درباره بامیلو</p></div>
+                <p><a href="#">درباره ما</a></p>
+                <p><a href="#">تماس با ما</a></p>
+                <p><a href="#">همکاری با ما</a></p>
+                <p><a href="#">بامیلو بلاگ</a></p>
+                <p><a href="#">قوانین و مقررات بامیلو</a></p>
+                <p><a href="#">فروش عمده و سازمانی</a></p>
+                <p><a href="#">چرا بامیلو؟</a></p>
+                <p><a href="#">خرید اقساطی</a></p>
+              </div>
+              <div class="fbottom1-boxs">
+                <div class="fbottom1-name2"><p>اطلاعات تماس</p></div>
+                <p class="inf">با ما در تماس باشید ما پاسخگوی شما هستیم:</p>
+                <p class="inf">تلفن: 02191093985 | تلگرام: 09902747796</p>
+                <p class="inf">ایمیل: info@bamilokala.com</p>
+                <p class="inf">ساعات پاسخگویی : همه روزه از ساعت 9 الی 15</p>
+              </div>
+            </div>
+            <div class="fbottom2">
+              <div class="fbottom2-pic">
+                <img src="img/footer-1.png" alt="نماد اعتماد" />
+                <img src="img/footer-2.webp" alt="نماد اینماد" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-end">
+          <p>
+            تمامی حقوق مادی و معنوی این سایت متعلق به بامیلو می‌باشد. استفاده از
+            مطالب این وب‌سایت تنها برای مقاصد غیر تجاری و با ذکر منبع بلامانع
+            است.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- مودال سبد خرید -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-modal-content">
+        <div class="cart-modal-header">
+          <h2>سبد خرید</h2>
+          <button type="button" class="cart-close-btn" id="cart-close-btn">
+            ×
+          </button>
+        </div>
+        <div id="cart-items-container"></div>
+        <div id="cart-footer" class="cart-footer"></div>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
