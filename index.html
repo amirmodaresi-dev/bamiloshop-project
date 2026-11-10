@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>فروشگاه بامیلو</title>
+    <title>فروشگاه اینترنتی بامیلو | تجربه خرید مدرن و هوشمند</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- آیکون‌های Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -11,77 +19,261 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- نوار اطلاع‌رسانی بالای سایت -->
+    <div class="top-promo-bar">
+      <div class="top-promo-inner">
+        <span
+          ><i class="fa fa-bolt"></i> جشنواره فروش ویژه بامیلو | ارسال رایگان
+          برای سفارش‌های بالای ۲ میلیون تومان</span
+        >
+        <div class="top-promo-links">
+          <a href="#amazing-section">پیشنهاد شگفت‌انگیز</a>
+          <span class="divider">|</span>
+          <a href="#footer-contact">پشتیبانی ۲۴/۷</a>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <header>
+      <!-- هدر اصلی سایت -->
+      <header class="site-header" id="site-header">
         <div class="header1">
+          <!-- دکمه منوی موبایل -->
+          <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobile-menu-btn"
+            aria-label="باز کردن منو"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+
           <div class="header1-right">
-            <img src="img/bamilo.png" alt="لوگوی بامیلو" />
-            <div class="searchBox">
+            <a href="#" class="brand-logo" aria-label="صفحه اصلی بامیلو">
+              <img src="img/bamilo.png" alt="لوگوی بامیلو" />
+            </a>
+            <div class="searchBox" id="search-box-wrap">
               <input
                 type="search"
                 id="search-input"
-                placeholder="جستجوی محصولات"
+                placeholder="جستجوی محصول، برند یا دسته‌بندی..."
+                autocomplete="off"
               />
-              <button aria-label="جستجو">
+              <button
+                type="button"
+                id="search-clear-btn"
+                class="search-clear-btn"
+                title="پاک کردن جستجو"
+                style="display: none"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <button type="button" id="search-submit-btn" aria-label="جستجو">
                 <i class="fa fa-search"></i>
               </button>
             </div>
           </div>
+
           <div class="header1-left">
             <div class="login">
-              <a href="#">
+              <a href="#" class="login-btn" id="login-trigger-btn">
                 <i class="fa fa-user-o"></i>
-                <span>ورود / ثبت نام</span>
+                <span>ورود / ثبت‌نام</span>
               </a>
-              <div class="cart-icon-box" id="cart-icon">
+              <button
+                type="button"
+                class="wishlist-icon-box"
+                id="wishlist-icon"
+                aria-label="علاقه‌مندی‌ها"
+                title="لیست علاقه‌مندی‌ها"
+              >
+                <i class="fa fa-heart-o"></i>
+                <span id="wishlist-count">0</span>
+              </button>
+              <button
+                type="button"
+                class="cart-icon-box"
+                id="cart-icon"
+                aria-label="سبد خرید"
+                title="مشاهده سبد خرید"
+              >
                 <i class="fa fa-shopping-cart"></i>
                 <span id="cart-count">0</span>
-              </div>
+              </button>
             </div>
           </div>
         </div>
-        <div class="header2">
+
+        <!-- منوی دسته‌بندی دسکتاپ -->
+        <nav class="header2" aria-label="منوی دسته‌بندی‌ها">
           <ul>
             <li>
-              <a href="#">مد و لباس <i class="fa fa-chevron-down"></i></a>
+              <a
+                href="#categories-section"
+                data-filter="all"
+                class="nav-cat-link active"
+              >
+                <i class="fa fa-th-large"></i> همه دسته‌ها
+              </a>
             </li>
             <li>
-              <a href="#">کالای دیجیتال <i class="fa fa-chevron-down"></i></a>
+              <a
+                href="#digital-categories"
+                data-filter="digital"
+                class="nav-cat-link"
+              >
+                کالای دیجیتال <i class="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
-              <a href="#">لوازم خانه <i class="fa fa-chevron-down"></i></a>
+              <a
+                href="#laptop-section"
+                data-filter="laptop"
+                class="nav-cat-link"
+              >
+                لپ‌تاپ و سیستم <i class="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
-              <a href="#">زیبایی و سلامت <i class="fa fa-chevron-down"></i></a>
+              <a href="#home-section" data-filter="home" class="nav-cat-link">
+                لوازم خانه و آشپزخانه <i class="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
-              <a href="#">سرگرمی و ورزش <i class="fa fa-chevron-down"></i></a>
+              <a
+                href="#amazing-section"
+                data-filter="amazing"
+                class="nav-cat-link"
+              >
+                زیبایی و سلامت <i class="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
-              <a href="#">فرهنگ و هنر <i class="fa fa-chevron-down"></i></a>
+              <a href="#special-banners" class="nav-cat-link">
+                ساعت و گجت پوشیدنی <i class="fa fa-chevron-down"></i>
+              </a>
             </li>
             <li>
-              <a href="#">ابزار و خودرو <i class="fa fa-chevron-down"></i></a>
+              <a href="#amazing-section" class="nav-cat-link highlight-link">
+                <i class="fa fa-fire"></i> تخفیف‌ها و پیشنهادها
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- دراور منوی موبایل -->
+      <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+      <aside
+        class="mobile-nav-drawer"
+        id="mobile-nav-drawer"
+        aria-label="منوی موبایل"
+      >
+        <div class="mobile-nav-header">
+          <img src="img/bamilo.png" alt="لوگوی بامیلو" />
+          <button
+            type="button"
+            class="mobile-nav-close"
+            id="mobile-nav-close"
+            aria-label="بستن منو"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="mobile-nav-body">
+          <p class="mobile-nav-title">دسته‌بندی محصولات</p>
+          <ul class="mobile-nav-list">
+            <li>
+              <a href="#amazing-section" class="mobile-nav-link"
+                ><i class="fa fa-fire"></i> پیشنهادهای شگفت‌انگیز</a
+              >
             </li>
             <li>
-              <a href="#">پت شاپ <i class="fa fa-chevron-down"></i></a>
+              <a href="#digital-categories" class="mobile-nav-link"
+                ><i class="fa fa-mobile"></i> کالای دیجیتال</a
+              >
+            </li>
+            <li>
+              <a href="#laptop-section" class="mobile-nav-link"
+                ><i class="fa fa-laptop"></i> لپ‌تاپ و اولترابوک</a
+              >
+            </li>
+            <li>
+              <a href="#home-section" class="mobile-nav-link"
+                ><i class="fa fa-home"></i> لوازم خانه و دکوراسیون</a
+              >
+            </li>
+            <li>
+              <a href="#special-banners" class="mobile-nav-link"
+                ><i class="fa fa-clock-o"></i> ساعت هوشمند و کلاسیک</a
+              >
+            </li>
+            <li>
+              <a href="#footer-contact" class="mobile-nav-link"
+                ><i class="fa fa-headphones"></i> پشتیبانی و تماس با ما</a
+              >
             </li>
           </ul>
         </div>
-      </header>
+      </aside>
 
       <main>
-        <!-- اسلایدر -->
-        <section class="sec1">
-          <div class="slider-container">
+        <!-- وضعیت جستجوی زنده (وقتی کاربر عبارتی تایپ کند نمایش داده می‌شود) -->
+        <div
+          id="search-status-banner"
+          class="search-status-banner"
+          style="display: none"
+        >
+          <div class="search-status-info">
+            <i class="fa fa-search"></i>
+            <span id="search-status-text">نتایج جستجو برای: </span>
+          </div>
+          <button type="button" id="reset-search-btn" class="reset-search-btn">
+            نمایش همه محصولات <i class="fa fa-times"></i>
+          </button>
+        </div>
+
+        <!-- بخش ۱: اسلایدر اصلی (Hero Slider) -->
+        <section class="sec1" aria-label="اسلایدر بنرهای اصلی">
+          <div class="slider-container" id="hero-slider">
             <div class="slider-wrapper" id="sliderWrapper">
-              <img src="img/slide1.jpg" alt="اسلاید 1" class="slide active" />
-              <img src="img/slide2.jpg" alt="اسلاید 2" class="slide" />
-              <img src="img/slide3.jpg" alt="اسلاید 3" class="slide" />
-              <img src="img/slide4.jpg" alt="اسلاید 4" class="slide" />
+              <img
+                src="img/slide1.jpg"
+                alt="جشنواره فروش ویژه بامیلو - اسلاید ۱"
+                class="slide active"
+              />
+              <img
+                src="img/slide2.jpg"
+                alt="جدیدترین گجت‌های دیجیتال - اسلاید ۲"
+                class="slide"
+              />
+              <img
+                src="img/slide3.jpg"
+                alt="تخفیف‌های فصل لوازم خانگی - اسلاید ۳"
+                class="slide"
+              />
+              <img
+                src="img/slide4.jpg"
+                alt="پیشنهادهای استثنایی بامیلو - اسلاید ۴"
+                class="slide"
+              />
             </div>
-            <button class="prev-btn" onclick="changeSlide(-1)">&#10095;</button>
-            <button class="next-btn" onclick="changeSlide(1)">&#10094;</button>
+            <button
+              type="button"
+              class="prev-btn"
+              onclick="changeSlide(-1)"
+              aria-label="اسلاید قبلی"
+            >
+              <i class="fa fa-angle-right"></i>
+            </button>
+            <button
+              type="button"
+              class="next-btn"
+              onclick="changeSlide(1)"
+              aria-label="اسلاید بعدی"
+            >
+              <i class="fa fa-angle-left"></i>
+            </button>
             <div class="dots-container" id="dotsContainer">
               <span class="dot active" onclick="currentSlide(0)"></span>
               <span class="dot" onclick="currentSlide(1)"></span>
@@ -91,126 +283,219 @@
           </div>
         </section>
 
-        <!-- خدمات -->
-        <section class="sec2">
+        <!-- بخش ۲: ویژگی‌ها و خدمات فروشگاه -->
+        <section class="sec2" aria-label="خدمات و ضمانت‌های بامیلو">
           <div class="sec2-boxs">
-            <img src="img/sec2-box1.png" alt="ارسال به سراسر ایران" />
+            <div class="sec2-icon-wrap">
+              <img src="img/sec2-box1.png" alt="ارسال به سراسر ایران" />
+            </div>
             <div class="sec2-text">
-              <p>ارسال به سراسر ایران</p>
-              <p>ارسال به تمام ایران با بسته بندی ویژه</p>
+              <p class="sec2-title">ارسال سریع به سراسر ایران</p>
+              <p class="sec2-sub">ارسال ایمن با بسته‌بندی ویژه</p>
             </div>
           </div>
           <div class="sec2-boxs">
-            <img src="img/sec2-box2.png" alt="۳۰ روز بازگشت رایگان کالا" />
+            <div class="sec2-icon-wrap">
+              <img src="img/sec2-box2.png" alt="۳۰ روز بازگشت رایگان کالا" />
+            </div>
             <div class="sec2-text">
-              <p>۳۰ روز بازگشت رایگان کالا</p>
-              <p>بر اساس قوانین</p>
+              <p class="sec2-title">۳۰ روز ضمانت بازگشت کالا</p>
+              <p class="sec2-sub">مرجوعی آسان بر اساس قوانین</p>
             </div>
           </div>
           <div class="sec2-boxs">
-            <img src="img/sec2-box3.png" alt="پشتیبانی 24 ساعته" />
+            <div class="sec2-icon-wrap">
+              <img src="img/sec2-box3.png" alt="پشتیبانی ۲۴ ساعته" />
+            </div>
             <div class="sec2-text">
-              <p>پشتیبانی 24 ساعته</p>
-              <p>7 روز هفته</p>
+              <p class="sec2-title">پشتیبانی ۲۴ ساعته</p>
+              <p class="sec2-sub">پاسخگویی در ۷ روز هفته</p>
             </div>
           </div>
           <div class="sec2-boxs">
-            <img src="img/sec2-box4.png" alt="مجموعه متنوع محصولات" />
+            <div class="sec2-icon-wrap">
+              <img src="img/sec2-box4.png" alt="مجموعه متنوع محصولات" />
+            </div>
             <div class="sec2-text">
-              <p>مجموعه ای از متنوع ترین</p>
-              <p>محصولات در فروشگاه‌های اینترنتی</p>
+              <p class="sec2-title">تنوع بی‌نظیر محصولات</p>
+              <p class="sec2-sub">ضمانت اصالت و بهترین قیمت</p>
             </div>
           </div>
         </section>
 
-        <!-- دسته‌بندی‌های ویژه -->
-        <section class="sec3">
+        <!-- بخش ۳: دسته‌بندی‌های ویژه تبلیغاتی -->
+        <section
+          class="sec3"
+          id="special-banners"
+          aria-label="پیشنهادهای ویژه دسته‌بندی"
+        >
           <div class="sec3-boxs sec3-box1">
             <div class="sec3-boxs-img">
-              <img src="img/sec3-box1.png" alt="ساعت هوشمند" />
+              <img src="img/sec3-box1.png" alt="ساعت هوشمند" loading="lazy" />
             </div>
             <div class="sec3-text">
+              <span class="sec3-tag">پیشنهاد ویژه</span>
               <h4>ساعت هوشمند</h4>
-              <p>تخفیف تا %60</p>
-              <button>خرید کنید</button>
+              <p>تخفیف تا ۶۰٪</p>
+              <button
+                type="button"
+                onclick="scrollToSection('amazing-section')"
+              >
+                خرید کنید <i class="fa fa-angle-left"></i>
+              </button>
             </div>
           </div>
           <div class="sec3-boxs sec3-box2">
             <div class="sec3-boxs-img">
-              <img src="img/sec3-box2.png" alt="ساعت های عقربه ای" />
+              <img
+                src="img/sec3-box2.png"
+                alt="ساعت‌های عقربه‌ای"
+                loading="lazy"
+              />
             </div>
             <div class="sec3-text">
-              <h4>ساعت های عقربه ای</h4>
-              <p>تخفیف تا %30</p>
-              <button>خرید کنید</button>
+              <span class="sec3-tag">کالکشن لوکس</span>
+              <h4>ساعت‌های عقربه‌ای</h4>
+              <p>تخفیف تا ۳۰٪</p>
+              <button
+                type="button"
+                onclick="scrollToSection('amazing-section')"
+              >
+                خرید کنید <i class="fa fa-angle-left"></i>
+              </button>
             </div>
           </div>
           <div class="sec3-boxs sec3-box3">
             <div class="sec3-boxs-img">
-              <img src="img/sec3-box3.jpg" alt="دوال سنس جدید" />
+              <img src="img/sec3-box3.jpg" alt="دوال سنس جدید" loading="lazy" />
             </div>
             <div class="sec3-text">
+              <span class="sec3-tag">گیمینگ حرفه‌ای</span>
               <h4>دوال سنس جدید</h4>
-              <p>برای پلی استیشن 5</p>
-              <button>خرید کنید</button>
+              <p>مخصوص پلی‌استیشن ۵</p>
+              <button type="button" onclick="scrollToSection('laptop-section')">
+                خرید کنید <i class="fa fa-angle-left"></i>
+              </button>
             </div>
           </div>
           <div class="sec3-boxs sec3-box4">
             <div class="sec3-boxs-img">
-              <img src="img/sec3-box4.jpg" alt="دوربین دیجیتال" />
+              <img
+                src="img/sec3-box4.jpg"
+                alt="دوربین دیجیتال"
+                loading="lazy"
+              />
             </div>
             <div class="sec3-text">
+              <span class="sec3-tag">عکاسی حرفه‌ای</span>
               <h4>دوربین دیجیتال</h4>
-              <p>ثبت لحظه های زندگی</p>
-              <button>خرید کنید</button>
+              <p>ثبت لحظه‌های ماندگار</p>
+              <button
+                type="button"
+                onclick="scrollToSection('digital-categories')"
+              >
+                خرید کنید <i class="fa fa-angle-left"></i>
+              </button>
             </div>
           </div>
         </section>
 
-        <!-- کالای دیجیتال -->
-        <section class="sec4">
-          <div class="sec4-boxs">
-            <img src="img/sec4-box1.jpg" alt="گوشی موبایل" />
-            <h5>گوشی موبایل</h5>
+        <!-- بخش ۴: دسته‌بندی‌های کالای دیجیتال -->
+        <section
+          class="sec4-wrapper"
+          id="digital-categories"
+          aria-label="دسته‌بندی‌های محبوب دیجیتال"
+        >
+          <div class="section-header-clean">
+            <h3>دسته‌بندی‌های محبوب دیجیتال</h3>
+            <p>انتخاب سریع از میان پرفروش‌ترین گروه‌های کالایی</p>
           </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box2.jpg" alt="لپ تاپ" />
-            <h5>لپ تاپ</h5>
-          </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box3.jpg" alt="کامپیوتر و تجهیزات" />
-            <h5>کامپیوتر و تجهیزات</h5>
-          </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box4.jpg" alt="ساعت هوشمند" />
-            <h5>ساعت هوشمند</h5>
-          </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box5.jpg" alt="هندزفری، هدفون" />
-            <h5>هندزفری، هدفون</h5>
-          </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box6.jpg" alt="پرینتر" />
-            <h5>پرینتر</h5>
-          </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box7.jpg" alt="شبکه و ارتباطات" />
-            <h5>شبکه و ارتباطات</h5>
-          </div>
-          <div class="sec4-boxs">
-            <img src="img/sec4-box8.jpg" alt="دوربین عکاسی" />
-            <h5>دوربین عکاسی</h5>
+          <div class="sec4">
+            <div class="sec4-boxs" onclick="filterByKeyword('گوشی')">
+              <div class="sec4-img-ring">
+                <img src="img/sec4-box1.jpg" alt="گوشی موبایل" loading="lazy" />
+              </div>
+              <h5>گوشی موبایل</h5>
+            </div>
+            <div class="sec4-boxs" onclick="scrollToSection('laptop-section')">
+              <div class="sec4-img-ring">
+                <img src="img/sec4-box2.jpg" alt="لپ تاپ" loading="lazy" />
+              </div>
+              <h5>لپ‌تاپ</h5>
+            </div>
+            <div class="sec4-boxs" onclick="filterByKeyword('کیس')">
+              <div class="sec4-img-ring">
+                <img
+                  src="img/sec4-box3.jpg"
+                  alt="کامپیوتر و تجهیزات"
+                  loading="lazy"
+                />
+              </div>
+              <h5>کامپیوتر و تجهیزات</h5>
+            </div>
+            <div class="sec4-boxs" onclick="filterByKeyword('ساعت')">
+              <div class="sec4-img-ring">
+                <img src="img/sec4-box4.jpg" alt="ساعت هوشمند" loading="lazy" />
+              </div>
+              <h5>ساعت هوشمند</h5>
+            </div>
+            <div class="sec4-boxs" onclick="scrollToSection('amazing-section')">
+              <div class="sec4-img-ring">
+                <img
+                  src="img/sec4-box5.jpg"
+                  alt="هندزفری، هدفون"
+                  loading="lazy"
+                />
+              </div>
+              <h5>هندزفری و هدفون</h5>
+            </div>
+            <div class="sec4-boxs" onclick="scrollToSection('laptop-section')">
+              <div class="sec4-img-ring">
+                <img src="img/sec4-box6.jpg" alt="پرینتر" loading="lazy" />
+              </div>
+              <h5>ماشین‌های اداری</h5>
+            </div>
+            <div class="sec4-boxs" onclick="scrollToSection('laptop-section')">
+              <div class="sec4-img-ring">
+                <img
+                  src="img/sec4-box7.jpg"
+                  alt="شبکه و ارتباطات"
+                  loading="lazy"
+                />
+              </div>
+              <h5>تجهیزات شبکه</h5>
+            </div>
+            <div class="sec4-boxs" onclick="scrollToSection('amazing-section')">
+              <div class="sec4-img-ring">
+                <img
+                  src="img/sec4-box8.jpg"
+                  alt="دوربین عکاسی"
+                  loading="lazy"
+                />
+              </div>
+              <h5>دوربین عکاسی</h5>
+            </div>
           </div>
         </section>
 
-        <!-- محصولات شگفت‌انگیز -->
-        <section class="sec5">
+        <!-- بخش ۵: محصولات شگفت‌انگیز -->
+        <section
+          class="sec5"
+          id="amazing-section"
+          aria-label="پیشنهادهای شگفت‌انگیز"
+        >
           <div class="sec5top">
-            <div class="sec5top1"></div>
+            <div class="sec5top1">
+              <span class="amazing-badge-pill">
+                <i class="fa fa-bolt"></i> تخفیف‌های روزانه محدود
+              </span>
+            </div>
             <div class="sec5top2">
               <img src="img/sec5top.png" alt="پیشنهاد شگفت‌انگیز" />
               <div class="timer-container" id="countdown-timer">
-                <span class="timer-label">پایان تخفیف در:</span>
+                <span class="timer-label"
+                  ><i class="fa fa-clock-o"></i> پایان تخفیف در:</span
+                >
                 <div class="timer-wrapper">
                   <div class="timer-box" id="hours">00</div>
                   <span>:</span>
@@ -221,127 +506,236 @@
               </div>
             </div>
             <div class="sec5top3">
-              <a href="#"
-                ><button>نمایش همه<i class="fa fa-angle-left"></i></button
-              ></a>
+              <button
+                type="button"
+                onclick="resetSearchAndScroll('amazing-section')"
+              >
+                نمایش همه <i class="fa fa-angle-left"></i>
+              </button>
             </div>
           </div>
           <div class="sec5bottom" id="amazing-products-container"></div>
         </section>
 
-        <!-- بنرهای تبلیغاتی -->
-        <section class="sec6">
-          <div class="sec6-box">
-            <img src="img/sec6-box1.png" alt="بنر تبلیغاتی 1" />
-          </div>
-          <div class="sec6-box">
-            <img src="img/sec6-box2.png" alt="بنر تبلیغاتی 2" />
-          </div>
-          <div class="sec6-box">
-            <img src="img/sec6-box3.png" alt="بنر تبلیغاتی 3" />
-          </div>
+        <!-- بخش ۶: بنرهای تبلیغاتی سه‌تایی -->
+        <section class="sec6" aria-label="بنرهای تبلیغاتی">
+          <a href="#amazing-section" class="sec6-box">
+            <img src="img/sec6-box1.png" alt="بنر تبلیغاتی ۱" loading="lazy" />
+          </a>
+          <a href="#laptop-section" class="sec6-box">
+            <img src="img/sec6-box2.png" alt="بنر تبلیغاتی ۲" loading="lazy" />
+          </a>
+          <a href="#home-section" class="sec6-box">
+            <img src="img/sec6-box3.png" alt="بنر تبلیغاتی ۳" loading="lazy" />
+          </a>
         </section>
 
-        <!-- لپ تاپ -->
-        <section class="sec7">
+        <!-- بخش ۷: لپ‌تاپ و اولترابوک -->
+        <section class="sec7" id="laptop-section" aria-label="محصولات لپ‌تاپ">
           <div class="sec7-top">
-            <h3>لپ تاپ</h3>
-            <a href="#"
-              ><button>نمایش همه <i class="fa fa-angle-left"></i></button
-            ></a>
+            <div class="sec-title-group">
+              <h3><i class="fa fa-laptop"></i> لپ‌تاپ و کامپیوتر</h3>
+              <span class="sec-subtitle"
+                >جدیدترین لپ‌تاپ‌های مهندسی، گیمینگ و روزمره</span
+              >
+            </div>
+            <div class="sec-actions-group">
+              <select
+                id="laptop-sort-select"
+                class="sort-select"
+                aria-label="مرتب‌سازی لپ‌تاپ‌ها"
+              >
+                <option value="default">مرتب‌سازی پیش‌فرض</option>
+                <option value="asc">ارزان‌ترین به گران‌ترین</option>
+                <option value="desc">گران‌ترین به ارزان‌ترین</option>
+              </select>
+              <button
+                type="button"
+                onclick="resetSearchAndScroll('laptop-section')"
+              >
+                نمایش همه <i class="fa fa-angle-left"></i>
+              </button>
+            </div>
           </div>
           <div class="sec7-bottom" id="laptop-products-container"></div>
         </section>
 
-        <!-- بنرهای دوتایی -->
-        <section class="sec8">
-          <div class="sec8-pic">
-            <img src="img/sec8-pic1.png" alt="بنر 1" />
-          </div>
-          <div class="sec8-pic">
-            <img src="img/sec8-pic2.png" alt="بنر 2" />
-          </div>
+        <!-- بخش ۸: بنرهای دوتایی -->
+        <section class="sec8" aria-label="بنرهای ویژه میانی">
+          <a href="#home-section" class="sec8-pic">
+            <img
+              src="img/sec8-pic1.png"
+              alt="بنر ویژه لوازم خانگی ۱"
+              loading="lazy"
+            />
+          </a>
+          <a href="#amazing-section" class="sec8-pic">
+            <img
+              src="img/sec8-pic2.png"
+              alt="بنر ویژه لوازم خانگی ۲"
+              loading="lazy"
+            />
+          </a>
         </section>
 
-        <!-- لوازم خانگی -->
-        <section class="sec9">
+        <!-- بخش ۹: لوازم خانگی -->
+        <section
+          class="sec9"
+          id="home-section"
+          aria-label="محصولات لوازم خانگی"
+        >
           <div class="sec9-top">
-            <h3>لوازم خانگی</h3>
-            <a href="#"
-              ><button>نمایش همه <i class="fa fa-angle-left"></i></button
-            ></a>
+            <div class="sec-title-group">
+              <h3><i class="fa fa-home"></i> خانه، آشپزخانه و دکوراسیون</h3>
+              <span class="sec-subtitle"
+                >منتخب بهترین لوازم کاربردی و تزئینی منزل</span
+              >
+            </div>
+            <button
+              type="button"
+              onclick="resetSearchAndScroll('home-section')"
+            >
+              نمایش همه <i class="fa fa-angle-left"></i>
+            </button>
           </div>
           <div class="sec9-bottom" id="sec9-products"></div>
         </section>
 
-        <!-- بنر پایانی -->
-        <section class="sec10">
-          <a href="#"><img src="img/sec10-pic.jpg" alt="بنر اصلی" /></a>
+        <!-- بخش ۱۰: بنر پایانی -->
+        <section class="sec10" aria-label="بنر کمپین پایانی">
+          <a href="#amazing-section">
+            <img
+              src="img/sec10-pic.jpg"
+              alt="کمپین فروش ویژه بامیلو"
+              loading="lazy"
+            />
+          </a>
         </section>
       </main>
 
-      <footer>
+      <!-- فوتر سایت -->
+      <footer id="footer-contact">
         <div class="footer-box">
-          <div class="ftop-pic">
-            <img src="img/bamilo.png" alt="لوگوی بامیلو" />
+          <div class="footer-top-row">
+            <div class="ftop-pic">
+              <img src="img/bamilo.png" alt="لوگوی بامیلو" />
+            </div>
+            <button
+              type="button"
+              class="back-to-top-btn"
+              onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            >
+              بازگشت به بالا <i class="fa fa-angle-up"></i>
+            </button>
           </div>
+
           <div class="fbottom">
             <div class="fbottom1">
               <div class="fbottom1-boxs">
                 <div class="fbottom1-name"><p>خدمات مشتریان</p></div>
-                <p><a href="#">سوالات متداول</a></p>
-                <p><a href="#">رهگیری سفارش‌ها</a></p>
-                <p><a href="#">نحوه ثبت سفارش</a></p>
-                <p><a href="#">روش های پرداخت</a></p>
-                <p><a href="#">شرایط حمل و تحویل کالا</a></p>
-                <p><a href="#">شرایط ضمانت و بازگشت کالا</a></p>
-                <p><a href="#">شرایط استفاده از کوپن تخفیف</a></p>
-                <p><a href="#">سیاست حفظ حریم خصوصی</a></p>
+                <p><a href="#">پاسخ به پرسش‌های متداول</a></p>
+                <p><a href="#">پیگیری و رهگیری سفارش‌ها</a></p>
+                <p><a href="#">راهنمای جامع ثبت سفارش</a></p>
+                <p><a href="#">شیوه‌ها و درگاه‌های پرداخت</a></p>
+                <p><a href="#">شرایط ارسال و تحویل اکسپرس</a></p>
+                <p><a href="#">رویه ضمانت و بازگشت کالا</a></p>
+                <p><a href="#">نحوه استفاده از کد تخفیف</a></p>
+                <p><a href="#">حریم خصوصی کاربران</a></p>
               </div>
               <div class="fbottom1-boxs">
-                <div class="fbottom1-name"><p>درباره بامیلو</p></div>
-                <p><a href="#">درباره ما</a></p>
-                <p><a href="#">تماس با ما</a></p>
-                <p><a href="#">همکاری با ما</a></p>
-                <p><a href="#">بامیلو بلاگ</a></p>
-                <p><a href="#">قوانین و مقررات بامیلو</a></p>
+                <div class="fbottom1-name"><p>با بامیلو</p></div>
+                <p><a href="#">درباره فروشگاه بامیلو</a></p>
+                <p><a href="#">تماس با پشتیبانی</a></p>
+                <p><a href="#">فرصت‌های شغلی و همکاری</a></p>
+                <p><a href="#">مجله اینترنتی بامیلو بلاگ</a></p>
+                <p><a href="#">قوانین و مقررات عمومی</a></p>
                 <p><a href="#">فروش عمده و سازمانی</a></p>
-                <p><a href="#">چرا بامیلو؟</a></p>
-                <p><a href="#">خرید اقساطی</a></p>
+                <p><a href="#">چرا خرید از بامیلو؟</a></p>
+                <p><a href="#">شرایط خرید اقساطی</a></p>
               </div>
               <div class="fbottom1-boxs">
-                <div class="fbottom1-name2"><p>اطلاعات تماس</p></div>
-                <p class="inf">با ما در تماس باشید ما پاسخگوی شما هستیم:</p>
-                <p class="inf">تلفن: 02191093985 | تلگرام: 09902747796</p>
-                <p class="inf">ایمیل: info@bamilokala.com</p>
-                <p class="inf">ساعات پاسخگویی : همه روزه از ساعت 9 الی 15</p>
+                <div class="fbottom1-name2"><p>اطلاعات تماس و پشتیبانی</p></div>
+                <p class="inf">
+                  همواره مشتاق شنیدن صدای گرم شما و پاسخگویی به سوالاتتان هستیم:
+                </p>
+                <p class="inf">
+                  <i class="fa fa-phone"></i> تلفن پشتیبانی: ۰۲۱-۹۱۰۹۳۹۸۵
+                </p>
+                <p class="inf">
+                  <i class="fa fa-paper-plane"></i> پشتیبانی تلگرام: ۰۹۹۰۲۷۴۷۷۹۶
+                </p>
+                <p class="inf">
+                  <i class="fa fa-envelope-o"></i> ایمیل: info@bamilokala.com
+                </p>
+                <p class="inf">
+                  <i class="fa fa-clock-o"></i> ساعات پاسخگویی: همه‌روزه از ساعت
+                  ۹ الی ۲۱
+                </p>
+                <div class="footer-socials">
+                  <a href="#" aria-label="اینستاگرام"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                  <a href="#" aria-label="تلگرام"
+                    ><i class="fa fa-telegram"></i
+                  ></a>
+                  <a href="#" aria-label="لینکدین"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                  <a href="#" aria-label="توییتر"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </div>
               </div>
             </div>
             <div class="fbottom2">
-              <div class="fbottom2-pic">
-                <img src="img/footer-1.png" alt="نماد اعتماد" />
-                <img src="img/footer-2.webp" alt="نماد اینماد" />
+              <div class="fbottom2-card">
+                <h4>نمادهای اعتماد و مجوزها</h4>
+                <p>خرید امن با درگاه‌های معتبر بانکی</p>
+                <div class="fbottom2-pic">
+                  <img
+                    src="img/footer-1.png"
+                    alt="نماد ساماندهی"
+                    loading="lazy"
+                  />
+                  <img
+                    src="img/footer-2.webp"
+                    alt="نماد اعتماد الکترونیکی (اینماد)"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="footer-end">
           <p>
-            تمامی حقوق مادی و معنوی این سایت متعلق به بامیلو می‌باشد. استفاده از
-            مطالب این وب‌سایت تنها برای مقاصد غیر تجاری و با ذکر منبع بلامانع
-            است.
+            تمامی حقوق مادی و معنوی این وب‌سایت متعلق به فروشگاه اینترنتی بامیلو
+            می‌باشد. طراحی و توسعه بهینه‌شده برای نمونه کار فرانت‌اند.
           </p>
         </div>
       </footer>
     </div>
 
     <!-- مودال سبد خرید -->
-    <div id="cart-modal" class="cart-modal">
+    <div
+      id="cart-modal"
+      class="cart-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cart-modal-title"
+    >
       <div class="cart-modal-content">
         <div class="cart-modal-header">
-          <h2>سبد خرید</h2>
-          <button type="button" class="cart-close-btn" id="cart-close-btn">
-            ×
+          <h2 id="cart-modal-title">
+            <i class="fa fa-shopping-bag"></i> سبد خرید شما
+          </h2>
+          <button
+            type="button"
+            class="cart-close-btn"
+            id="cart-close-btn"
+            aria-label="بستن سبد خرید"
+          >
+            &times;
           </button>
         </div>
         <div id="cart-items-container"></div>
@@ -349,6 +743,20 @@
       </div>
     </div>
 
+    <!-- مودال مشاهده سریع محصول (Quick View Modal) -->
+    <div
+      id="quickview-modal"
+      class="cart-modal"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="cart-modal-content quickview-content"
+        id="quickview-body"
+      ></div>
+    </div>
+
+    <!-- کانتینر نوتیفیکیشن (Toast) -->
     <div id="toast-container"></div>
 
     <script src="js/script.js"></script>
